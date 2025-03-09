@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: Lemon;
+  src: url("../src/assets/fonts/Lemon-Regular.ttf");
+}
+
+@theme{
+  --font-Lemon: Lemon, "sans-serif"
+}
+
+#Upcoming-events {
+  padding-bottom: 7px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Space Grotesk", sans-serif;
+  background: #322c2c;
+  color: #f3f4f6;
+  overflow-x: hidden; /* Prevents horizontal scrolling, which causes slight bug */
+  
+
+}
+
+@layer utilities {
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .slick-slide > div {
+    margin: 0 10px;
+  } 
+  .slick-prev:before {
+    color: #d97431
+  }
+  .slick-next:before {
+    color: #d97431
+  }
+  
+  .animate-blink {
+    animation: blink 0.8s step-end infinite;
+  }
+
+  @keyframes loading {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(250%);
+    }
+  }
+
+  .animate-loading-bar {
+    animation: loading 0.8s ease infinite;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#raccoon {
+  border-radius: 25px;
+}
+
+#home {
+  background-image: url(assets/images/home-bg_raccoon.png);
+  background-size: cover;
+}
+
+#about {
+  background-image: url(assets/images/5.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#contact {
+  background-image: url(assets/images/contact-bg.png);
+  padding-top: 7px;
+}

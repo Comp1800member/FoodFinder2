@@ -1,1 +1,3 @@
-# FoodFinder2
+# FoodFinder
+
+make sure to add venv environemtn
